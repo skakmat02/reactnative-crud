@@ -20,17 +20,17 @@ const RootStack = createStackNavigator(
       navigationOptions: {
 
       }
-    },   
-      PegawaiRead: {
+    },
+    PegawaiRead: {
       screen: PegawaiRead,
       navigationOptions: {
 
       }
     },
-   
+
   },
   {
-    initialRouteName: 'PegawaiRead', 
+    initialRouteName: 'PegawaiRead',
   }
 );
 

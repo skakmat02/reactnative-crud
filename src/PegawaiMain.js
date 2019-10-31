@@ -61,13 +61,13 @@ export default class MainActivity extends Component {
 
 
                 <TouchableOpacity style={styles.tombol} onPress={this.Insert_Pegawai} >
-                <Text style={styles.texts}> SIMPAN DATA PEGAWAI </Text>
+                    <Text style={styles.texts}> SIMPAN DATA PEGAWAI </Text>
                 </TouchableOpacity>
-                <Text style={{ fontSize: 20, textAlign: "center", marginBottom: 7 }}> _____________ </Text>
+                {/* <Text style={{ fontSize: 20, textAlign: "center", marginBottom: 7 }}> _____________ </Text>
 
                 <TouchableOpacity style={styles.tombol} onPress={this.Lihat_Pegawai}>
                     <Text style={styles.texts}> LIHAT DATA PEGAWAI </Text>
-                </TouchableOpacity>
+                </TouchableOpacity> */}
             </View>
         );
     }

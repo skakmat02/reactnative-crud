@@ -26,15 +26,21 @@ export default class MainActivity extends Component {
     }
 
     componentDidMount() {
+        const {navigation} = this.props;
+    navigation.addListener ('willFocus', () =>{
         return fetch("http://17.17.17.104/my-react-crud/LihatSemuaPegawai.php")
-            .then((response) => response.json())
-            .then((responseJson) => {
+        .then((response) => response.json())
+        .then((responseJson) => {
 
-                this.setState({ dataSource: responseJson, isLoading: false, });
-            })
-            .catch((error) => {
-                console.error(error);
-            });
+            this.setState({ dataSource: responseJson, isLoading: false, });
+        })
+        .catch((error) => {
+            console.error(error);
+        });
+
+        
+  });
+       
     }
 
     getPegawaiData = (
