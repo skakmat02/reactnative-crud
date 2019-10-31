@@ -6,7 +6,6 @@ import {
     Alert,
     TextInput,
     Text,
-    Platform,
     TouchableOpacity,
 } from "react-native";
 

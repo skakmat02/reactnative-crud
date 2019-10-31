@@ -2,8 +2,8 @@ import React from 'react';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import PegawaiMain from './src/PegawaiMain';
-// import PegawaiRead from './src/PegawaiRead';
-// import PegawaiEdit from './src/PegawaiEdit';
+import PegawaiRead from './src/PegawaiRead';
+import PegawaiEdit from './src/PegawaiEdit';
 
 
 
@@ -15,22 +15,22 @@ const RootStack = createStackNavigator(
 
       }
     },
-    // PegawaiEdit: {
-    //   screen: PegawaiEdit,
-    //   navigationOptions: {
+    PegawaiEdit: {
+      screen: PegawaiEdit,
+      navigationOptions: {
 
-    //   }
-    // },   
-        // PegawaiRead: {
-    //   screen: PegawaiRead,
-    //   navigationOptions: {
+      }
+    },   
+      PegawaiRead: {
+      screen: PegawaiRead,
+      navigationOptions: {
 
-    //   }
-    // },
+      }
+    },
    
   },
   {
-    initialRouteName: 'PegawaiMain', 
+    initialRouteName: 'PegawaiRead', 
   }
 );
 
