@@ -24,6 +24,12 @@ export default class MainActivity extends Component {
     }
 
     Insert_Pegawai = () => {
+
+        if (this.state.TextInput_Nama.trim() === "" || this.state.TextInput_Gaji.trim() === "" ) {
+            this.setState(() => ({ nameError: "Harus Diisi Semua." }));
+          } else {
+            
+          
         fetch("http://17.17.17.104/my-react-crud/InsertDataPegawai.php", {
             method: "POST",
             headers: {
@@ -40,10 +46,12 @@ export default class MainActivity extends Component {
             .then(responseJson => {
 
                 Alert.alert(responseJson);
+                this.props.navigation.navigate("PegawaiRead");
             })
             .catch(error => {
                 console.error(error);
             });
+        }
     };
 
     Lihat_Pegawai = () => {
@@ -54,6 +62,8 @@ export default class MainActivity extends Component {
         return (
             <View style={styles.container}>
                 <Text style={{ fontSize: 20, textAlign: "center", marginBottom: 7 }}> Insert Data Pegawai </Text>
+
+                {!!this.state.nameError && (<Text style={{ color: "red", marginBottom: 2 }}>{this.state.nameError}</Text>)}
 
                 <TextInput placeholder="Data Nama" onChangeText={TextInputValue => this.setState({ TextInput_Nama: TextInputValue })} style={styles.input} />
 
